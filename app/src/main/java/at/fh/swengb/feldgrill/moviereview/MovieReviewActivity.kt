@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_movie_review.*
 
 class MovieReviewActivity : AppCompatActivity() {
 
-
+    /*
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == android.R.id.home) {
@@ -20,6 +20,8 @@ class MovieReviewActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
