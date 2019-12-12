@@ -27,7 +27,7 @@ class MovieReviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_review)
 
-        val movieId = intent.getStringExtra(EXTRA_MOVIE_ID)
+        val movieId = intent.getStringExtra(MovieDetailsActivity.EXTRA_DETAILS_ID)
 
         if (movieId == null) {
 
@@ -40,10 +40,7 @@ class MovieReviewActivity : AppCompatActivity() {
                 val newReview = Review(movie_rating_bar.rating.toDouble(),movie_feedback.text.toString())
                 MovieRepository.reviewMovie(movieId,newReview)
                 setResult(Activity.RESULT_OK)
-                val intent = Intent(this, MovieDetailsActivity::class.java)
-                intent.putExtra(EXTRA_MOVIE_ID, movieId)
-                startActivity(intent)
-                //finish()
+                finish()
             }
         }
     }
