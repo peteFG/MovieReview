@@ -4,11 +4,22 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import at.fh.swengb.feldgrill.moviereview.MainActivity.Companion.EXTRA_MOVIE_ID
 import kotlinx.android.synthetic.main.activity_movie_review.*
 
 class MovieReviewActivity : AppCompatActivity() {
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == android.R.id.home) {
+            onBackPressed()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
