@@ -16,10 +16,8 @@ class Movie(
         reviews.forEach{
             sum += it.reviewValue
         }
-        val average = String.format ("%.3f", sum/reviews.count()).toDouble()
-        return average
+        //val average =
+        return String.format ("%.3f", sum/reviews.count()).toDouble()
+        //return average
     }
-
-
-
 }

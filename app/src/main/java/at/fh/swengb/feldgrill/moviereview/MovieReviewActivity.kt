@@ -11,18 +11,6 @@ import kotlinx.android.synthetic.main.activity_movie_review.*
 
 class MovieReviewActivity : AppCompatActivity() {
 
-    /*
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-        if (id == android.R.id.home) {
-            onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-     */
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_review)
@@ -30,16 +18,17 @@ class MovieReviewActivity : AppCompatActivity() {
         val movieId = intent.getStringExtra(MovieDetailsActivity.EXTRA_DETAILS_ID)
 
         if (movieId == null) {
-
+            Toast.makeText(this, "Error: No movieId. Closing activity",Toast.LENGTH_SHORT).show()
             finish()
         } else {
+
             movie_rating_header.text = MovieRepository.movieById(movieId)?.title
 
             rate_movie.setOnClickListener {
-
                 val newReview = Review(movie_rating_bar.rating.toDouble(),movie_feedback.text.toString())
                 MovieRepository.reviewMovie(movieId,newReview)
                 setResult(Activity.RESULT_OK)
+                Toast.makeText(this, "Your Review has been added!",Toast.LENGTH_SHORT).show()
                 finish()
             }
         }

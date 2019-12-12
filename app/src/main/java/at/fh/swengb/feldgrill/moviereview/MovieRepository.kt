@@ -23,7 +23,7 @@ object MovieRepository {
                 "Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into, whenever he loses his temper.",
                 MovieGenre.ROMANCE,
                 Person("Louis Leterrier","17.06.1973"),
-                listOf(Person("Edward Norton","18.10.1969"),Person("Liv Tyler","01.07.1977"),Person("Tim Roth","14.05.1961")),
+                listOf(Person("Edward Norton","18.10.1969"),Person("Liv Tyler","01.07.1977")),
                 mutableListOf()
             ),
             Movie(
@@ -33,7 +33,7 @@ object MovieRepository {
                 "With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.",
                 MovieGenre.ACTION,
                 Person("Jon Favreau","19.10.1966"),
-                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Mickey Rourke","16.10.1952"),Person("Gwyneth Paltrow","27.10.1972")),
+                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Mickey Rourke","16.10.1952")),
                 mutableListOf()
             ),
             Movie(
@@ -43,7 +43,7 @@ object MovieRepository {
                 "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
                 MovieGenre.ACTION,
                 Person("Kenneth Branagh","10.12.1960"),
-                listOf(Person("Chris Hemsworth","11.08.1983"),Person("Anthony Hopkins","31.12.1937"),Person("Natalie Portman","09.06.1981")),
+                listOf(Person("Chris Hemsworth","11.08.1983"),Person("Anthony Hopkins","31.12.1937")),
                 mutableListOf()
             ),
             Movie(
@@ -53,7 +53,7 @@ object MovieRepository {
                 "Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a \"Super-Soldier serum\". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.",
                 MovieGenre.ACTION,
                 Person("Joe Johnston","13.05.1950"),
-                listOf(Person("Chris Evans","13.06.1981"),Person("Hugo Weaving","04.04.1960"),Person("Samuel L. Jackson","21.12.1948")),
+                listOf(Person("Chris Evans","13.06.1981"),Person("Hugo Weaving","04.04.1960")),
                 mutableListOf()
             ),
             Movie(
@@ -63,7 +63,7 @@ object MovieRepository {
                 "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
                 MovieGenre.ROMANCE,
                 Person("Joss Whedon","23.06.1964"),
-                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Chris Evans","13.06.1981"),Person("Scarlett Johansson","22.11.1984")),
+                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Chris Evans","13.06.1981")),
                 mutableListOf()
             ),
             Movie(
@@ -73,7 +73,7 @@ object MovieRepository {
                 "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
                 MovieGenre.DRAMA,
                 Person("Shane Black","16.12.1961"),
-                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Guy Pearce","05.10.1967"),Person("Gwyneth Paltrow","27.10.1972")),
+                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Guy Pearce","05.10.1967")),
                 mutableListOf()
             ),
             Movie(
@@ -83,7 +83,7 @@ object MovieRepository {
                 "When the Dark Elves attempt to plunge the universe into darkness, Thor must embark on a perilous and personal journey that will reunite him with doctor Jane Foster.",
                 MovieGenre.HORROR,
                 Person("Alan Taylor","19.10.1965"),
-                listOf(Person("Chris Hemsworth","11.08.1983"),Person("Natalie Portman","09.06.1981"),Person("Tom Hiddleston","08.02.1981")),
+                listOf(Person("Chris Hemsworth","11.08.1983"),Person("Natalie Portman","09.06.1981")),
                 mutableListOf()
             ),
             Movie(
@@ -93,7 +93,7 @@ object MovieRepository {
                 "As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.",
                 MovieGenre.ACTION,
                 Person("Anthony Russo","03.02.1970"),
-                listOf(Person("Chris Evans","13.06.1981"),Person("Samuel L. Jackson","21.12.1948"),Person("Scarlett Johansson","22.11.1984")),
+                listOf(Person("Chris Evans","13.06.1981"),Person("Samuel L. Jackson","21.12.1948")),
                 mutableListOf()
             ),
             Movie(
@@ -103,7 +103,7 @@ object MovieRepository {
                 "A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",
                 MovieGenre.HORROR,
                 Person("James Gunn","05.08.1966"),
-                listOf(Person("Chris Pratt","21.06.1979"),Person("Vin Diesel","18.07.1967"),Person("Bradley Cooper","05.01.1975")),
+                listOf(Person("Chris Pratt","21.06.1979"),Person("Vin Diesel","18.07.1967")),
                 mutableListOf()
             ),
             Movie(
@@ -113,7 +113,7 @@ object MovieRepository {
                 "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
                 MovieGenre.DRAMA,
                 Person("Joss Whedon","23.06.1964"),
-                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Chris Evans","13.06.1981"),Person("Mark Ruffalo","22.11.1967")),
+                listOf(Person("Robert Downey jr.","04.04.1965"),Person("Chris Evans","13.06.1981")),
                 mutableListOf()
             ),
             Movie(
@@ -123,7 +123,7 @@ object MovieRepository {
                 "Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, plan and pull off a heist that will save the world.",
                 MovieGenre.COMEDY,
                 Person("Peyton Reed","03.07.1964"),
-                listOf(Person("Paul Rudd","06.04.1969"),Person("Michael Douglas","25.09.1944"),Person("Corey Stoll","14.03.1976")),
+                listOf(Person("Paul Rudd","06.04.1969"),Person("Michael Douglas","25.09.1944")),
                 mutableListOf()
             ),
             Movie(
@@ -133,7 +133,7 @@ object MovieRepository {
                 "Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.",
                 MovieGenre.ACTION,
                 Person("Anthony Russo","03.02.1970"),
-                listOf(Person("Chris Evans","13.06.1981"),Person("Robert Downey jr.","04.04.1965"),Person("Scarlett Johansson","22.11.1984")),
+                listOf(Person("Chris Evans","13.06.1981"),Person("Robert Downey jr.","04.04.1965")),
                 mutableListOf()
             ),
             Movie(
@@ -143,7 +143,7 @@ object MovieRepository {
                 "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.",
                 MovieGenre.COMEDY,
                 Person("Scott Derrickson","16.07.1966"),
-                listOf(Person("Benedict Cumberbatch","19.07.1976"),Person("Chiwetel Ejiofor","10.07.1977"),Person("Rachel McAdams","17.11.1978")),
+                listOf(Person("Benedict Cumberbatch","19.07.1976"),Person("Chiwetel Ejiofor","10.07.1977")),
                 mutableListOf()
             ),
             Movie(
@@ -153,7 +153,7 @@ object MovieRepository {
                 "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.",
                 MovieGenre.ROMANCE,
                 Person("James Gunn","05.08.1966"),
-                listOf(Person("Chris Pratt","04.04.1965"),Person("Zoe Saldana","18.06.1978"),Person("Dave Bautista","18.01.1969")),
+                listOf(Person("Chris Pratt","04.04.1965"),Person("Zoe Saldana","18.06.1978")),
                 mutableListOf()
             )
         )

@@ -34,27 +34,26 @@ class MovieDetailsActivity : AppCompatActivity() {
 
 
         if (movieId == null) {
-            //Toast.makeText(this, "Hallo", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error: No movieId. Closing activity",Toast.LENGTH_SHORT).show()
             finish()
+
         } else {
+
             movie_details_title.text = MovieRepository.movieById(movieId)?.title
-            movie_details_director_name.text =
-                MovieRepository.movieById(movieId.toString())?.director?.name
+            movie_details_director_name.text = MovieRepository.movieById(movieId.toString())?.director?.name
             movie_details_plot_content.text = MovieRepository.movieById(movieId)?.plot
             movie_details_release_date.text = MovieRepository.movieById(movieId)?.release
             movie_details_genre_name.text = MovieRepository.movieById(movieId)?.genre?.description
-            movie_details_actors_name.text =
-                MovieRepository.movieById(movieId.toString())?.actors?.joinToString { it.name }
-
+            movie_details_actors_name.text = MovieRepository.movieById(movieId.toString())?.actors?.joinToString { it.name }
 
             var average = 0.0
             if (MovieRepository.movieById(movieId.toString())?.reviews!!.isNotEmpty()) {
                 average = MovieRepository.movieById(movieId.toString())!!.reviewAverage()
             }
+
             movie_details_avg_review_bar.rating = average.toFloat()
             movie_details_average_review_value.text = average.toString()
-            movie_details_review_amount.text =
-                MovieRepository.movieById(movieId.toString())?.reviews?.count().toString()
+            movie_details_review_amount.text = MovieRepository.movieById(movieId.toString())?.reviews?.count().toString()
 
 
             movie_details_rate_movie.setOnClickListener {
@@ -62,8 +61,6 @@ class MovieDetailsActivity : AppCompatActivity() {
                 intent.putExtra(EXTRA_DETAILS_ID, movieId)
                 startActivityForResult(intent, REQUEST_REVIEW)
             }
-
-
         }
     }
 }
