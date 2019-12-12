@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="MovieTitle" />
+
+        <TextView
+            android:id="@+id/item_movie_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ReleaseDate"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_movie_actor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ActorName" />
+
+    <TextView
+        android:id="@+id/item_movie_director"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DirectorName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RatingBar
+            android:id="@+id/item_movie_avg_review_bar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" />
+
+        <TextView
+            android:id="@+id/item_movie_avg_review_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/item_movie_review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+</LinearLayout>
