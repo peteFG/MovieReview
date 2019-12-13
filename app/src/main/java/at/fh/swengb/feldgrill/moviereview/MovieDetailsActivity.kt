@@ -34,7 +34,6 @@ class MovieDetailsActivity : AppCompatActivity() {
 
 
         if (movieId == null) {
-            Toast.makeText(this, "Error: No movieId. Closing activity",Toast.LENGTH_SHORT).show()
             finish()
 
         } else {
