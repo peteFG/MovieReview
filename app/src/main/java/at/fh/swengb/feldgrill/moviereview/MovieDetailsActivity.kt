@@ -37,22 +37,28 @@ class MovieDetailsActivity : AppCompatActivity() {
             finish()
 
         } else {
+            val movie = MovieRepository.movieById(movieId)
 
-            movie_details_title.text = MovieRepository.movieById(movieId)?.title
-            movie_details_director_name.text = MovieRepository.movieById(movieId.toString())?.director?.name
-            movie_details_plot_content.text = MovieRepository.movieById(movieId)?.plot
-            movie_details_release_date.text = MovieRepository.movieById(movieId)?.release
-            movie_details_genre_name.text = MovieRepository.movieById(movieId)?.genre?.description
-            movie_details_actors_name.text = MovieRepository.movieById(movieId.toString())?.actors?.joinToString { it.name }
+            if(movie == null) {
+                finish()
+                return
+            }
+
+            movie_details_title.text = movie.title
+            movie_details_director_name.text = movie.director?.name
+            movie_details_plot_content.text = movie.plot
+            movie_details_release_date.text = movie.release
+            movie_details_genre_name.text = movie.genre?.description
+            movie_details_actors_name.text = movie.actors?.joinToString { it.name }
 
             var average = 0.0
-            if (MovieRepository.movieById(movieId.toString())?.reviews!!.isNotEmpty()) {
-                average = MovieRepository.movieById(movieId.toString())!!.reviewAverage()
+            if (movie != null && movie.reviews.isNotEmpty()) {
+                average = movie.reviewAverage()
             }
 
             movie_details_avg_review_bar.rating = average.toFloat()
             movie_details_average_review_value.text = average.toString()
-            movie_details_review_amount.text = MovieRepository.movieById(movieId.toString())?.reviews?.count().toString()
+            movie_details_review_amount.text = movie.reviews?.count().toString()
 
 
             movie_details_rate_movie.setOnClickListener {
