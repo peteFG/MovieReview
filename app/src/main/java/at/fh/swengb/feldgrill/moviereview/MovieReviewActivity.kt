@@ -15,22 +15,53 @@ class MovieReviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_review)
 
-        val movieId = intent.getStringExtra(MovieDetailsActivity.EXTRA_DETAILS_ID)
+        val movieId = intent.getStringExtra(MainActivity.EXTRA_MOVIE_ID)
 
-        if (movieId == null) {
-            Toast.makeText(this, "Error: No movieId. Closing activity",Toast.LENGTH_SHORT).show()
+        updateUi(movieId)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
             finish()
+            return true
+        } else {
+            return super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun updateUi(movieId: String?) {
+        if (movieId == null) {
+            handleMovieNotFound()
+            return
+        }
+
+        val movie = MovieRepository.movieById(movieId)
+
+        if (movie == null) {
+            handleMovieNotFound()
         } else {
 
-            movie_rating_header.text = MovieRepository.movieById(movieId)?.title
+            movie_rating_header.text = movie.title
 
             rate_movie.setOnClickListener {
-                val newReview = Review(movie_rating_bar.rating.toDouble(),movie_feedback.text.toString())
-                MovieRepository.reviewMovie(movieId,newReview)
-                setResult(Activity.RESULT_OK)
-                Toast.makeText(this, "Your Review has been added!",Toast.LENGTH_SHORT).show()
+                val reviewValue = movie_rating_bar.rating.toDouble()
+                val reviewText = movie_feedback.text.toString()
+
+                val newReview = Review(reviewValue, reviewText)
+                MovieRepository.reviewMovie(movie.id, newReview)
+
+                val resultIntent = Intent()
+                setResult(Activity.RESULT_OK, resultIntent)
+                Toast.makeText(this, "Your Review has been added!", Toast.LENGTH_SHORT).show()
                 finish()
             }
         }
     }
+
+    private fun handleMovieNotFound() {
+        Toast.makeText(this, "Movie could not be found", Toast.LENGTH_LONG).show()
+        finish()
+    }
+
 }

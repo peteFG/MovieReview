@@ -8,9 +8,11 @@ class Movie(
     val genre: MovieGenre,
     val director: Person,
     val actors: List<Person>,
-    val reviews: MutableList<Review>,
-    val posterImagePath: String,
-    val backdropImagePath: String) {
+    val reviews: MutableList<Review>
+    //val posterImagePath: String,
+    //val backdropImagePath: String
+    )
+    {
 
 
     fun reviewAverage() : Double{
