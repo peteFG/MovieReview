@@ -5,11 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_movie_details.view.*
 import kotlinx.android.synthetic.main.item_movie.view.*
 
 class MovieAdapter(val clickListener: (movie: Movie) -> Unit): RecyclerView.Adapter<MovieViewHolder>() {
+
     private var movieList = listOf<Movie>()
+
     fun updateList(newList: List<Movie>) {
         movieList = newList
         notifyDataSetChanged()
@@ -34,21 +37,12 @@ class MovieAdapter(val clickListener: (movie: Movie) -> Unit): RecyclerView.Adap
 
 class MovieViewHolder(itemView: View, val clickListener: (movie: Movie) -> Unit): RecyclerView.ViewHolder(itemView) {
     fun bindItem(movie: Movie) {
+
         itemView.item_movie_title.text = movie.title
-        itemView.item_movie_release.text = movie.release.drop(6)
-        itemView.item_movie_actor.text = movie.actors[0].name
-        itemView.item_movie_director.text = movie.director.name
-
-
-
-        var average = 0.0
-        if(movie.reviews.isNotEmpty()) {
-            average=movie.reviewAverage()
-        }
-
-        itemView.item_movie_avg_review_bar.rating = average.toFloat()
-        itemView.item_movie_avg_review_value.text = average.toString()
-        itemView.item_movie_review_count.text = movie.reviews.count().toString()
+        Glide
+            .with(itemView)
+            .load(movie.posterImagePath)
+            .into(itemView.item_movie_image)
 
         itemView.setOnClickListener {
             clickListener(movie)

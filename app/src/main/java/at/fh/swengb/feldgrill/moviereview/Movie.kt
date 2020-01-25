@@ -1,27 +1,24 @@
 package at.fh.swengb.feldgrill.moviereview
 
-class Movie(
+import com.squareup.moshi.JsonClass
+
+
+@JsonClass(generateAdapter = true)
+open class Movie(
     val id: String,
     val title: String,
-    val release:String,
-    val plot: String,
-    val genre: MovieGenre,
-    val director: Person,
-    val actors: List<Person>,
-    val reviews: MutableList<Review>
-    //val posterImagePath: String,
-    //val backdropImagePath: String
-    )
+    val release: String,
+    val posterImagePath: String,
+    val backdropImagePath: String,
+    val reviews: MutableList<Review>)
     {
 
 
-    fun reviewAverage() : Double{
+    fun ratingAverage() : Double{
         var sum = 0.0
         reviews.forEach{
             sum += it.reviewValue
         }
-        //val average =
-        return String.format ("%.3f", sum/reviews.count()).toDouble()
-        //return average
+        return sum/reviews.count()
     }
 }

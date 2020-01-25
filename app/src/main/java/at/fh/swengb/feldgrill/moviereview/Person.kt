@@ -1,4 +1,8 @@
 package at.fh.swengb.feldgrill.moviereview
 
-class Person(val name: String, val birthday: String) {
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
+class Person(val name: String, val profileImagePath: String) {
+
 }

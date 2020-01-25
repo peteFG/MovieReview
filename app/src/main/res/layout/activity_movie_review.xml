@@ -21,18 +21,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
         android:numStars="5"
+        android:progressTint="#DFC107"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movie_rating_header" />
 
     <EditText
         android:id="@+id/movie_feedback"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="25dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
@@ -47,7 +49,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Rate this Movie"
+        android:backgroundTint="#2196F3"
+        android:text="@string/review_this_movie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movie_feedback" />

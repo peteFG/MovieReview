@@ -4,7 +4,9 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,16 +27,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        movieAdapter.updateList(MovieRepository.moviesList())
-        movie_recycler_view.layoutManager = LinearLayoutManager(this)
+        movie_recycler_view.layoutManager = GridLayoutManager(this,3)
         movie_recycler_view.adapter = movieAdapter
-    }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
+        MovieRepository.movieList(
+            success = {
 
-        if (requestCode == REQUEST_DETAILS && resultCode == Activity.RESULT_OK) {
-            movieAdapter.updateList(MovieRepository.moviesList())
-        }
+                movieAdapter.updateList(it)
+            },
+            error = {
+                Log.e("ERROR", it)
+            }
+        )
     }
 }
