@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:text="@string/placeholder_long"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,10 +20,9 @@
         android:id="@+id/movie_rating_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#FFFFFF"
+        android:layout_marginTop="20dp"
         android:numStars="5"
-        android:progressTint="#DFC107"
+        android:progressTint="@color/colorStars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movie_rating_header" />
@@ -44,13 +43,14 @@
 
     <Button
         android:id="@+id/rate_movie"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="115dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:backgroundTint="#2196F3"
+        android:layout_marginEnd="115dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="@string/review_this_movie"
+        android:textColor="@color/colorButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movie_feedback" />

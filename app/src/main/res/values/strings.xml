@@ -2,7 +2,8 @@
     <string name="app_name">Movie Review</string>
     <string name="PASSING_ERROR">PASSING_ERROR</string>
     <string name="PASSING_ERROR_CONTENT">No MovieID</string>
-    <string name="placeholder">PH</string>
+    <string name="placeholder_short">PH</string>
+    <string name="placeholder_long">placeholder</string>
     <string name="director">Director</string>
     <string name="actors">Actors</string>
     <string name="genre">Genre</string>
@@ -12,8 +13,4 @@
     <string name="review_this_movie">REVIEW THIS MOVIE</string>
     <string name="poster_description">Movie Poster</string>
     <string name="background_description">Movie Background</string>
-    <string name="base_URL">https://movies.bloder.xyz</string>
-    <string name="accessToken">7a6e5134-4c6a-4d12-aede-8aabc18fae3c</string>
-    <string name="API_call_fail">The call failed</string>
-    <string name="API_CALL">API_CALL</string>
 </resources>
